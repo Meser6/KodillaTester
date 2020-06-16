@@ -1,6 +1,6 @@
 public class HelloWorld {
     public static void main(String[] args) {
-        String text = "Hello Wordld!";
+        String text = "Hello World!";
         String name = "Kuba";
         int myAge = 25;
         char firstLetter= 'K';
