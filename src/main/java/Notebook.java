@@ -23,4 +23,7 @@ public class Notebook {
                 System.out.println("It isn's good notebook for you");
             }
         }
+        public void checkWeigth (){
+            // TODO
+        }
 }
