@@ -7,7 +7,7 @@ public class FirstClass {
         notebook.checkPrice();
         notebook.prof();
         notebook.checkWeigth();
-        System.out.println(heavyNotebook.weight+ " " + heavyNotebook.price + " " + notebook.year);
+        System.out.println(heavyNotebook.weight + " " + heavyNotebook.price + " " + notebook.year);
         heavyNotebook.checkPrice();
         heavyNotebook.prof();
         heavyNotebook.checkWeigth();
