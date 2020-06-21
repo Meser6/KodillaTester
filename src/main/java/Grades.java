@@ -11,14 +11,31 @@ public class Grades {
         if (this.size == 10) {
             return;
         }
-        this.grades[this.size]= value;
+        this.grades[this.size] = value;
         this.size++;
     }
 
+    public int lastMark(int[] grades) {
+        this.grades = grades;
+        int last = grades[grades.length - 1];
+        return last;
+
+    }
+
+    public double average(int[] grades) {
+        int suma = 0;
+        for (int i = 0; i < grades.length; i++) {
+            suma += grades[i];
+        }
+        double average = (suma / grades.length);
+        return average;
+    }
+
     public static void main(String[] args) {
-        Grades grades = new Grades ();
+        Grades grades = new Grades();
         grades.add(2);
         grades.add(5);
     }
 
 }
+
