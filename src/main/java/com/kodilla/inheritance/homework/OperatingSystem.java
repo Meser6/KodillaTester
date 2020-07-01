@@ -17,6 +17,6 @@ public class OperatingSystem {
     public OperatingSystem(int systemYear, int id) {
         this.systemYear = systemYear;
         this.id = id;
-        osNumber ++;
+        osNumber++;
     }
 }
