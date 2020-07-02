@@ -18,4 +18,5 @@ public class Hexagon extends Shape {
     public double circuit() {
         return 6 * a;
     }
+
 }

@@ -45,4 +45,5 @@ public class Person {
         Charwoman charwoman = new Charwoman();
         System.out.println(" She " + charwoman.responsibilities() + " and she earn " + charwoman.salary() + ".");
     }
+
 }

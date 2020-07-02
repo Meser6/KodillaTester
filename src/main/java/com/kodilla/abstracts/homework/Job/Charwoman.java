@@ -10,4 +10,5 @@ public class Charwoman extends Job {
     public String responsibilities() {
         return "Cleaning the office";
     }
+
 }

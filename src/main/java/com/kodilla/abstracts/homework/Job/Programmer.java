@@ -10,4 +10,5 @@ public class Programmer extends Job {
     public String responsibilities() {
         return "Writing the code";
     }
+
 }

@@ -11,6 +11,5 @@ public class Main {
         Shape cricle = new Circle(5);
         cricle.about();
 
-
     }
 }

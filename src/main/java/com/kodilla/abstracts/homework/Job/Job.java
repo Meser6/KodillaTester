@@ -5,5 +5,4 @@ public abstract class Job {
 
     public abstract String responsibilities();
 
-
 }

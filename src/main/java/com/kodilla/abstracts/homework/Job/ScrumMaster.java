@@ -10,4 +10,5 @@ public class ScrumMaster extends Job {
     public String responsibilities() {
         return "Care about Scrum process";
     }
+
 }

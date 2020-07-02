@@ -10,4 +10,5 @@ public class Tester extends Job {
     public String responsibilities() {
         return "Testing application";
     }
+
 }
