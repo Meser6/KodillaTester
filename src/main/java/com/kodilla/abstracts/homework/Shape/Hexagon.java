@@ -5,6 +5,7 @@ public class Hexagon extends Shape {
     public Hexagon(int a) {
         super("Hexagon");
         this.a = a;
+        about();
     }
 
     private int a = 5;

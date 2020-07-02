@@ -9,6 +9,7 @@ public class Rectangle extends Shape {
         super("Rectangle");
         this.a = a;
         this.b = b;
+        about();
     }
 
     @Override

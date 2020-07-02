@@ -8,6 +8,7 @@ public class Square extends Shape {
     protected Square(int a) {
         super("Square");
         this.a = a;
+        about();
     }
 
     @Override

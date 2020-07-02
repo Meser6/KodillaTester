@@ -4,6 +4,7 @@ public class Circle extends Shape {
     public Circle(int r) {
         super("Circle");
         this.r = r;
+        about();
     }
     private int r = 5;
 

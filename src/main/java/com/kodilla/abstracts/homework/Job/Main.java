@@ -6,5 +6,6 @@ public class Main {
         Person two = new Person("Gosia", "Scrum Master", 22);
         Person three = new Person("Piotr", "Programmer", 24);
         Person four = new Person("Basia", "Charwoman", 49);
+        Person five = new Person("Jan", "Tester", 45);
     }
 }
