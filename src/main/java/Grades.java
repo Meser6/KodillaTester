@@ -1,4 +1,5 @@
 public class Grades {
+
     private int[] grades;
     private int size;
 
@@ -22,12 +23,13 @@ public class Grades {
 
     }
 
-    public double average(int[] grades) {
+    public double average(int[]grades) {
         int suma = 0;
         for (int i = 0; i < grades.length; i++) {
             suma += grades[i];
         }
         double average = (suma / grades.length);
+        System.out.println(average);
         return average;
     }
 
@@ -35,6 +37,13 @@ public class Grades {
         Grades grades = new Grades();
         grades.add(2);
         grades.add(5);
+        grades.lastMark(grades.grades);
+        grades.average(grades.grades);
+
+       
+
+
+
     }
 
 }
