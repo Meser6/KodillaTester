@@ -11,7 +11,6 @@ public class CashMachineTestSuite {
         int[] operation = cashMachine.getOperation();
         assertEquals(0, operation.length);
     }
-
     @Test
     public void addTwoOperations() {
         CashMachine cashMachine = new CashMachine();
