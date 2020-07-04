@@ -1,6 +1,6 @@
 package com.kodilla.abstracts.homework.Shape;
 
-public class Main {
+public class Main {//TODO Review kdrzazga - please rename to Application
     public static void main(String[] args) {
         Shape rectangle = new Rectangle(4, 5);
         Shape square = new Square(5);

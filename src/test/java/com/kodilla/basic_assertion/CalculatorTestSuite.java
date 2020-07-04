@@ -13,9 +13,11 @@ public class CalculatorTestSuite {
         int sumResult = calculator.sum(a, b);
         assertEquals(13, sumResult);
         int subResult = calculator.sub(a, b);
-        assertEquals(-3, subResult);
+        assertEquals(-3, subResult);/*TODO Review kdrzazga - pls move to a new test*/
         int powResult = calculator.pow(a);
-        assertEquals(25, powResult);
+        assertEquals(25, powResult);/*TODO Review kdrzazga - pls move to a new test*/
 
     }
+
+
 }

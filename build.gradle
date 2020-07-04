@@ -2,11 +2,16 @@ plugins {
     id 'java'
 }
 
+<<<<<<< HEAD
 group 'org.example'
 version '1.0-SNAPSHOT'
 test {
     useJUnitPlatform()
 }
+=======
+group 'com.kodilla'
+version '1.0-SNAPSHOT'
+>>>>>>> origin/master
 
 repositories {
     mavenCentral()

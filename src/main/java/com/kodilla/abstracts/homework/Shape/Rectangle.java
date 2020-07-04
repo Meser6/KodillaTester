@@ -9,7 +9,7 @@ public class Rectangle extends Shape {
         super("Rectangle");
         this.a = a;
         this.b = b;
-        about();
+        about();//TODO Review kdrzazga - please call about() separately, not in constructor
     }
 
     @Override
