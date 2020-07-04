@@ -32,4 +32,3 @@ public class BankTestSuite {
         assertEquals(-30, bank.balance());
     }
 }
-
