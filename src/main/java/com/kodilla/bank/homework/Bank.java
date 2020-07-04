@@ -26,7 +26,9 @@ public class Bank {
         return this.operation.howManyPayoff();
     }
 
-    public double averageOfPayment() {return this.operation.averageOfPayment(); }
+    public double averageOfPayment() {
+        return this.operation.averageOfPayment();
+    }
 
     public double howManyPayoff() {
         return this.operation.averageOfPayoff();

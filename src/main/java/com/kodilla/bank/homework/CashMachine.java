@@ -27,7 +27,7 @@ public class CashMachine {
         return this.operations.length;
     }
 
-    public int howManyPayment() { // wylicza ile zostalo wplacone +++
+    public int howManyPayment() {
         int payment = 0;
         for (int i = 0; i < operations.length; i++) {
             if (operations[i] > 0) {
@@ -37,7 +37,7 @@ public class CashMachine {
         return payment;
     }
 
-    public double averageOfPayment() { // wylicza srednia z wpłat +++
+    public double averageOfPayment() {
         int howMuchPayment = 0;
         for (int i = 0; i < operations.length; i++) {
             if (operations[i] > 0) {
@@ -47,7 +47,7 @@ public class CashMachine {
         return howManyPayment() / howMuchPayment;
     }
 
-    public int howManyPayoff() { // wylicza ile zostalo wyplacne ---
+    public int howManyPayoff() {
         int payoff = 0;
         for (int i = 0; i < operations.length; i++) {
             if (operations[i] < 0) {
@@ -57,7 +57,7 @@ public class CashMachine {
         return payoff;
     }
 
-    public double averageOfPayoff() { // wylicza srednia z wyplat ---
+    public double averageOfPayoff() {
         int howMuchPayoff = 0;
         for (int i = 0; i < operations.length; i++) {
             if (operations[i] > 0) {

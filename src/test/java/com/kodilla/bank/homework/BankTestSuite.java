@@ -6,10 +6,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class BankTestSuite {
     @Test
-    public void nonOpeartion(){
+    public void nonOpeartion() {
         Bank bank = new Bank();
         assertEquals(0, bank.balance());
     }
+
     @Test
     public void goodOperation() {
         Bank bank = new Bank();
@@ -21,7 +22,7 @@ public class BankTestSuite {
     }
 
     @Test
-    public void nonEveryOperationGood(){
+    public void nonEveryOperationGood() {
         Bank bank = new Bank();
         bank.addOperation(-90);
         bank.addOperation(60);
