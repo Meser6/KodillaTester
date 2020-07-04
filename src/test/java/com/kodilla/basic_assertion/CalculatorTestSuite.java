@@ -10,14 +10,20 @@ public class CalculatorTestSuite {
         Calculator calculator = new Calculator();
         int a = 5;
         int b = 8;
-        int sumResult = calculator.sum(a, b);
-        assertEquals(13, sumResult);
-        int subResult = calculator.sub(a, b);
-        assertEquals(-3, subResult);/*TODO Review kdrzazga - pls move to a new test*/
-        int powResult = calculator.pow(a);
-        assertEquals(25, powResult);/*TODO Review kdrzazga - pls move to a new test*/
-
+        assertEquals(13, calculator.sum(a, b));
     }
 
+    public void testSub() {
+        Calculator calculator = new Calculator();
+        int a = 5;
+        int b = 8;
+        assertEquals(-3, calculator.sub(a, b));/*Review kdrzazga - pls move to a new test*/
+    }
 
+    public void testPow() {
+        Calculator calculator = new Calculator();
+        int a = 5;
+        assertEquals(25, calculator.pow(a));/* Review kdrzazga - pls move to a new test*/
+
+    }
 }
