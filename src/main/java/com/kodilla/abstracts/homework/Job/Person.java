@@ -9,9 +9,10 @@ public class Person {
         this.firstName = firstName;
         this.job = job.toLowerCase();
         this.age = age;
-
-        //TODO Review kdrzazga - please delete lines below, constructor shoud only create an object
         System.out.println(firstName + " have " + age + " years old, and he is " + job + ".");
+        job();
+    }
+    public void job(){
         switch (job) {
             case "Tester":
                 tester();

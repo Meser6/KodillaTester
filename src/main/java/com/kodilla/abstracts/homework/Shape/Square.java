@@ -8,7 +8,7 @@ public class Square extends Shape {
     protected Square(int a) {
         super("Square");
         this.a = a;
-        about();//TODO Review kdrzazga - please call about() separately, not in constructor
+
     }
 
     @Override
