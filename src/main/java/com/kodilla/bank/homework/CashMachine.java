@@ -10,11 +10,13 @@ public class CashMachine {
     }
 
     public void add(int value) {
-        this.size++;
-        int[] newTab = new int[this.size];
-        System.arraycopy(operations, 0, newTab, 0, operations.length);
-        newTab[this.size - 1] = value;
-        this.operations = newTab;
+        if (value != 0 && value % 10 == 0) {
+            this.size++;
+            int[] newTab = new int[this.size];
+            System.arraycopy(operations, 0, newTab, 0, operations.length);
+            newTab[this.size - 1] = value;
+            this.operations = newTab;
+        }
     }
 
 
@@ -23,7 +25,7 @@ public class CashMachine {
     }
 
 
-    public int howManyOperation() { // wylicza ile bylo operacji
+    public int howManyOperation() {
         return this.operations.length;
     }
 
@@ -60,14 +62,14 @@ public class CashMachine {
     public double averageOfPayoff() {
         int howMuchPayoff = 0;
         for (int i = 0; i < operations.length; i++) {
-            if (operations[i] > 0) {
+            if (operations[i] < 0) {
                 howMuchPayoff++;
             }
         }
         return howManyPayoff() / howMuchPayoff;
     }
 
-    public int balance() { // wylicza bilans ostateczny
+    public int balance() {
         return howManyPayment() + howManyPayoff();
     }
 

@@ -9,9 +9,7 @@ public class Bank {
     }
 
     public void addOperation(int operations) {
-        if (operations != 0 && operations % 10 == 0) {
             this.operation.add(operations);
-        }
     }
 
     public int howManyOperation() {
