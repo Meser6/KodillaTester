@@ -1,6 +1,6 @@
 package com.kodilla.inheritance;
 
-public class Car {
+public class Car {//TODO Should be interface, not class
     private int wheels;
     private int seats;
 
