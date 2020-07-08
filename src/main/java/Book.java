@@ -6,16 +6,15 @@ public class Book {
         this.author = author;
         this.title = title;
     }
-    public Book of(String author, String title){
-
-        retu;
-
-        System.out.println("Author: " + author + ", title: " + title);/*TODO Review kdrzazga - Excercise says "Metoda ta ma zwracać
-         utworzony obiekt książki" - should return Book, not String*/
+    public static Book of(String author, String title){
+        Book book1 = new Book(author, title);
+        return book1;
     }
 
 
     public static void main(String[] args) {
+
         Book book = new Book("Rowling", "Harry Potter");
+        Book book1 = of("X", "y");
     }
 }
