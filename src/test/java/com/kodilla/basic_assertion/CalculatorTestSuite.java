@@ -13,6 +13,7 @@ public class CalculatorTestSuite {
         assertEquals(13, calculator.sum(a, b));
     }
 
+    @Test
     public void testSub() {
         Calculator calculator = new Calculator();
         int a = 5;
@@ -20,6 +21,7 @@ public class CalculatorTestSuite {
         assertEquals(-3, calculator.sub(a, b));/*Review kdrzazga - pls move to a new test*/
     }
 
+    @Test
     public void testPow() {
         Calculator calculator = new Calculator();
         int a = 5;
