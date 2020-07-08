@@ -10,7 +10,7 @@ public class CashMachine {
     }
 
     public void add(int value) {
-        if (value != 0 && value % 10 == 0) {
+        if (value != 0 && value % 10 == 0) {/*TODO Review kdrzazga: Why should the value be divisible by 10?*/
             this.size++;
             int[] newTab = new int[this.size];
             System.arraycopy(operations, 0, newTab, 0, operations.length);
@@ -53,7 +53,7 @@ public class CashMachine {
         int payoff = 0;
         for (int i = 0; i < operations.length; i++) {
             if (operations[i] < 0) {
-                payoff = operations[i] + payoff;
+                payoff = operations[i] + payoff;//TODO Review: should be payoff++
             }
         }
         return payoff;
@@ -66,7 +66,7 @@ public class CashMachine {
                 howMuchPayoff++;
             }
         }
-        return howManyPayoff() / howMuchPayoff;
+        return howManyPayoff() / howMuchPayoff;//TODO Reveiew - what if there´s no payoff?
     }
 
     public int balance() {
