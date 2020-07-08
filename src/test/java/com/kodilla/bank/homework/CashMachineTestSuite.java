@@ -85,6 +85,12 @@ public class CashMachineTestSuite {
     }
 
     @Test
+    public void averageOfPaymentWithZeroOperation() {
+        CashMachine cashMachine = new CashMachine();
+        assertEquals(0, cashMachine.averageOfPayment(), 0.01);
+    }
+
+    @Test
     public void averageOfPayoff() {
         CashMachine cashMachine = new CashMachine();
         cashMachine.add(-50);
@@ -94,5 +100,11 @@ public class CashMachineTestSuite {
         cashMachine.add(60);
         assertEquals(-75, cashMachine.averageOfPayoff(), 0.01);
 
+    }
+
+    @Test
+    public void averageOfPayoffWithZeroOperation() {
+        CashMachine cashMachine = new CashMachine();
+        assertEquals(0, cashMachine.averageOfPayoff(), 0.01);
     }
 }

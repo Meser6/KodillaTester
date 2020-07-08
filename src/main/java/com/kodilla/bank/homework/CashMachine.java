@@ -29,11 +29,11 @@ public class CashMachine {
         return this.operations.length;
     }
 
-    public int howManyPayment() {
+    public int howManyPayment() { // wylicza ilosc wplaconej gotowki
         int payment = 0;
         for (int i = 0; i < operations.length; i++) {
             if (operations[i] > 0) {
-                payment = operations[i] + payment;
+                payment += operations[i];
             }
         }
         return payment;
@@ -46,14 +46,17 @@ public class CashMachine {
                 howMuchPayment++;
             }
         }
-        return howManyPayment() / howMuchPayment;
+        if (howMuchPayment == 0)
+            return 0;
+        else
+            return howManyPayment() / howMuchPayment;
     }
 
-    public int howManyPayoff() {
+    public int howManyPayoff() { // wylicza ilosc wyplaconej gotowki
         int payoff = 0;
         for (int i = 0; i < operations.length; i++) {
             if (operations[i] < 0) {
-                payoff = operations[i] + payoff;
+                payoff += operations[i];
             }
         }
         return payoff;
@@ -66,7 +69,10 @@ public class CashMachine {
                 howMuchPayoff++;
             }
         }
-        return howManyPayoff() / howMuchPayoff;
+        if (howMuchPayoff == 0)
+            return 0;
+        else
+            return howManyPayoff() / howMuchPayoff;
     }
 
     public int balance() {

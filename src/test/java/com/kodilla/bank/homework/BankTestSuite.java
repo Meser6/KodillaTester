@@ -31,4 +31,40 @@ public class BankTestSuite {
         bank.addOperation(12);
         assertEquals(-30, bank.balance());
     }
+
+    @Test
+    public void averageOfEveryPaymentWithNonOperation() {
+        Bank bank1 = new Bank();
+        Bank bank2 = new Bank();
+        assertEquals(0, Bank.averageOfEveryPayment());
+    }
+
+    @Test
+    public void averageOfEveryPayment() {
+        Bank bank1 = new Bank();
+        bank1.addOperation(450);
+        bank1.addOperation(100);
+        Bank bank2 = new Bank();
+        bank2.addOperation(150);
+        bank2.addOperation(100);
+        assertEquals(200, Bank.averageOfEveryPayment(), 1.0);
+    }
+
+    @Test
+    public void averageOfEveryPayoffWithNonOperation() {
+        Bank bank1 = new Bank();
+        Bank bank2 = new Bank();
+        assertEquals(0, Bank.averageOfEveryPayoff());
+    }
+
+    @Test
+    public void averageOfEveryPayoff() { // kiedy odpalam tylko ten test to dziala, a jak odpale cala klase to nie. czemu?
+        Bank bank1 = new Bank();
+        bank1.addOperation(-450);
+        bank1.addOperation(-100);
+        Bank bank2 = new Bank();
+        bank2.addOperation(-150);
+        bank2.addOperation(-100);
+        assertEquals(-200, Bank.averageOfEveryPayoff(), 1.0);
+    }
 }

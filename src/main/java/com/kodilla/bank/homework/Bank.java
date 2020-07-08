@@ -2,6 +2,10 @@ package com.kodilla.bank.homework;
 
 public class Bank {
 
+    static int payment;
+    static int howManyPayment;
+    static int payoff;
+    static int howManyPayoff;
     private CashMachine operation;
 
     public Bank() {
@@ -9,7 +13,14 @@ public class Bank {
     }
 
     public void addOperation(int operations) {
-            this.operation.add(operations);
+        this.operation.add(operations);
+        if (operations > 0) {
+            payment += operations;
+            howManyPayment++;
+        } else if (operations < 0) {
+            payoff += operations;
+            howManyPayoff++;
+        }
     }
 
     public int howManyOperation() {
@@ -32,5 +43,19 @@ public class Bank {
         return this.operation.averageOfPayoff();
     }
 
+    public static double averageOfEveryPayment() {
+        if (howManyPayment == 0)
+            return 0;
+        else
+            return payment / howManyPayment;
 
+    }
+
+    public static double averageOfEveryPayoff() {
+        if (howManyPayoff == 0)
+            return 0;
+        else
+            return payoff / howManyPayoff;
+
+    }
 }
