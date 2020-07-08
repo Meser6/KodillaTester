@@ -31,4 +31,8 @@ public class BankTestSuite {
         bank.addOperation(12);
         assertEquals(-30, bank.balance());
     }
+
+    /*TODO Revew add tests to:
+    *  średnią wartość wypłaty,
+    średnią wartość wpłaty.*/
 }
