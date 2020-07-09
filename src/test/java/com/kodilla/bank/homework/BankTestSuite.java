@@ -58,7 +58,7 @@ public class BankTestSuite {
     }
 
     @Test
-    public void averageOfEveryPayoff() { // kiedy odpalam tylko ten test to dziala, a jak odpale cala klase to nie. czemu?
+    public void averageOfEveryPayoff() {
         Bank bank1 = new Bank();
         bank1.addOperation(-450);
         bank1.addOperation(-100);

@@ -1,3 +1,5 @@
+package others;
+
 public class MainExtended {
     public static void main(String[] args) {
         String mountain = "Rysy";

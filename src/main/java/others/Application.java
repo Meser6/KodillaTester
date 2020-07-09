@@ -1,6 +1,7 @@
+package others;
+
 public class Application {
 
-    //TODO Review kdrzazga - please create a class Person with these fields
     String name;
     double age;
     double height;
@@ -12,8 +13,7 @@ public class Application {
         checkAgeAndHeight();
     }
 
-        //TODO Review kdrzazga - please create method checkAgeAndHeight with code below
-    public void checkAgeAndHeight(){
+    public void checkAgeAndHeight() {
         if (name != null) {
             if (age > 30 && height > 160) {
                 System.out.println("User is older than 30 and higher then 160cm");

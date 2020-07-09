@@ -1,3 +1,5 @@
+package others;
+
 public class SimpleArray {
     public static void main(String[] args) {
             String[] name = new String[6];

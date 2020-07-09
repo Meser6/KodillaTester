@@ -1,3 +1,4 @@
+package others;
 import java.util.Scanner;
 
 public class Color {

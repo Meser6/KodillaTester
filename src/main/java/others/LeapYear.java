@@ -1,3 +1,5 @@
+package others;
+
 public class LeapYear {
     public static void main(String[] args) {
         int year = 1999; //tu wpisz rok//

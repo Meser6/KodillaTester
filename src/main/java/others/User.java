@@ -1,3 +1,5 @@
+package others;
+
 public class User {
     String userName;
     int age;
