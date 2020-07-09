@@ -7,7 +7,7 @@ public class ApSwitch {
     int number2 = ApEnterNumber.getNumber2();
     int number3 = ApEnterNumber.getNumber3();
     String operation = operation();
-    int result = result();
+   // int result = result();
 
     public String operation() {
         Scanner operation = new Scanner(System.in);
@@ -16,7 +16,7 @@ public class ApSwitch {
             String op = operation.nextLine().trim().toUpperCase();
             switch (op) {
                 case "A":
-                   result("ADD");
+                    result("ADD");
                 case "S":
                     result("ADD");
                 case "M":
@@ -44,7 +44,7 @@ public class ApSwitch {
     }
 
 
-    public void finale(int result()) {
+   /* public void finale(int result()) {
         if (result() % 2 == 0) {
             System.out.println("Your color is RED");
         } else if (result % 3 == 0) {
@@ -54,4 +54,5 @@ public class ApSwitch {
         }
     }
 
+    */
 }
