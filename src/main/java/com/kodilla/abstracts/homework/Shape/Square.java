@@ -5,7 +5,7 @@ public class Square extends Shape {
 
     private int a;
 
-    protected Square(int a) {
+    public Square(int a) {
         super("Square");
         this.a = a;
 

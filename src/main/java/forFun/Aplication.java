@@ -7,7 +7,7 @@ public class Aplication {
     //ale jest to liczba podzielna przez 3 to jest zolty a jesli tez nie to zielony.
     public static void main(String[] args) { ApSwitch finale = new ApSwitch();
     ApSwitch apSwitch = new ApSwitch();
-       finale.finale();
+     //  finale.finale();
 
 
     }
