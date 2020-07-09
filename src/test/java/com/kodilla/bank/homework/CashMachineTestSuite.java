@@ -12,6 +12,7 @@ public class CashMachineTestSuite {
         assertEquals(0, operation.length);
     }
 
+
     @Test
     public void addTwoOperations() {
         CashMachine cashMachine = new CashMachine();
