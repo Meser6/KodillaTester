@@ -8,7 +8,7 @@ import com.kodilla.collections.interfaces.homework.Opel;
 
 import java.util.ArrayList;
 
-public class CarListApplication {
+public class CarListApplication {/*TODO Rename to CarsListApplication, according to excercise*/
     public static void main(String[] args) {
         ArrayList<Car> list = new ArrayList<>();
         list.add(new Ford(15));
