@@ -5,21 +5,23 @@ public class TicTacToeAplication {
         //  Graphics dupa2 = new Graphics();
         // dupa2.graphics();
         Game a = new Game();
-        for (int i = 0; i < a.g.length; i++) {
-            System.out.println(a.y() + a.g[i]);
-        }
-       // System.out.println("---------");
-       /* a.add(3);
+        // for (int i = 0; i < a.g.length; i++) {
+        //    System.out.println(a.y() + a.g[i]);
+        // }
+        // System.out.println("---------");
+        a.add(0);
         System.out.println(a.y());
-        a.add(4);
+        a.add(6);
         System.out.println(a.y());
-        a.add(5);
+        a.add(1);
         System.out.println(a.y());
-        a.add(9);
+        a.add(7);
         System.out.println(a.y());
         a.areaFlash();
+        for (int i = 0; i < a.g.length; i++) {
+            System.out.println(a.g[i]);
+        }
 
-        */
     }
 
 }

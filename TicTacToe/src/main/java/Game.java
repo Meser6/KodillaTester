@@ -1,11 +1,11 @@
 public class Game extends XOrO {
 
     boolean comp = isComputer();
-    String one = getPlayerOne();
-    String two = getPlayerTwo();
+    String one = "X";    //getPlayerOne();
+    String two = "O";    //getPlayerTwo();
     boolean x = itsXtour();
 
-    public static String[] g = {"X", " ", " ", "O", " ", " ", "X", " ","O",};
+    public static String[] g = {" ", " ", " ", " ", " ", " ", " ", " ", " ",};
 
     public void initialArena() {
         System.out.println("It's a game arena: ");
@@ -22,33 +22,36 @@ public class Game extends XOrO {
 
     public int y() {
         int yy = 2;
-        String xx;
-        for (int i = 0; i == g.length; i++) {
-            g[i] = xx;
-        }
+        for (int i = 0; i < 9; i++) {
             switch (g[i]) {
                 case " ":
                     yy += 0;
+                    break;
                 case "X":
                     yy += 3;
+                    break;
                 case "O":
                     yy += 1;
+                    break;
             }
-
+        }
         return yy;
     }
 
 
     public boolean itsXtour() { // jeśli jest true to jest kolej X a jeśli false to Y
         int yy = 2;
-        for (int i = 0; i == g.length; i++) {
+        for (int i = 0; i < 9; i++) {
             switch (g[i]) {
                 case " ":
-                    yy = +0;
+                    yy += 0;
+                    break;
                 case "X":
-                    yy = +3;
+                    yy += 3;
+                    break;
                 case "O":
-                    yy = +1;
+                    yy += 1;
+                    break;
             }
         }
         if (yy % 2 != 0) {
@@ -61,9 +64,9 @@ public class Game extends XOrO {
     public void add(int value) {
         if (value >= 0 && value <= 8) {
             if (itsXtour() == true) {
-                this.g[value] = one;
+                g[value] = one;
             } else {
-                this.g[value] = two;
+                g[value] = two;
             }
         } else {
             System.out.println("Wrong number area.");
