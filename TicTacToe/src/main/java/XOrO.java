@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 public class XOrO extends Choice {
 
-    private final String XY = xOrY();
+    private final String XY = xOrY();  // pokazuje co wybrałes do gry
     //private String playerOne = playerOne();
-   // private String playerTwo = playerTwo();
+    // private String playerTwo = playerTwo();
 
     private static String xOrY() {
         System.out.println("Would you like to use X or O? ");
@@ -24,29 +24,30 @@ public class XOrO extends Choice {
         }
     }
 
- /*   private final String playerOne() {
-        if (XY == "X") {
-            return "X";
-        } else {
-            return "O";
-        }
-    }
+    /*   private final String playerOne() {
+           if (XY == "X") {
+               return "X";
+           } else {
+               return "O";
+           }
+       }
 
 
-    private final String playerTwo() {
-        if (XY == "X") {
-            return "O";
-        } else {
-            return "X";
-        }
+       private final String playerTwo() {
+           if (XY == "X") {
+               return "O";
+           } else {
+               return "X";
+           }
 
-    }
+       }
 
 
-
+   */
     public String getXY() {
         return XY;
     }
+    /*
 
     public String getPlayerOne() {
         return playerOne;
