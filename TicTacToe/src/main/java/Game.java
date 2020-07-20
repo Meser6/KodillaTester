@@ -43,7 +43,7 @@ public class Game extends Prepare {
     }
 
     public void round2() {
-        if (xOrY.equals("X")){
+        if (xOrY.equals("X")) {
             i = 4;
         }
         if (comp && i % 2 == 0) {
