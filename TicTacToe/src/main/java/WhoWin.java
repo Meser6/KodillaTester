@@ -1,6 +1,5 @@
 public class WhoWin extends Game {
 
-
     private final String[] p = getG();
 
     public void Game() {
@@ -71,4 +70,3 @@ public class WhoWin extends Game {
             System.out.println("+++++++++ O WINS!!! +++++++++");
     }
 }
-
