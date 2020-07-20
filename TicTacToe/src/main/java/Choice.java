@@ -1,13 +1,11 @@
 import java.util.Scanner;
 
-// tutaj wybierasz czy chcesz grac z czlowiekiem czy z kompem. boolean computer zwraca true jesli wybrales kompa
-
 public class Choice {
-    private String op = choice();
+    private final String op = choice();
     private final boolean computer = computer();
 
     private String choice() {
-        System.out.println("--- Hello in Tic Tac Toe!--- \nWould you like to play with computer or other player? " +
+        System.out.println("\n--- Hello in Tic Tac Toe!--- \n\nWould you like to play with computer or other player? " +
                 "(C - computer / P - Other player)");
         Scanner hello = new Scanner(System.in);
         while (true) {
@@ -24,14 +22,7 @@ public class Choice {
     }
 
     private boolean computer() {
-        switch (op) {
-            case "yes":
-                return true;
-            case "no":
-                return false;
-            default:
-                return false;
-        }
+        return "yes".equals(op);
     }
 
     public boolean isComputer() {
