@@ -14,7 +14,7 @@ public class WhoWin extends Game {
             }
             round++;
             if (round == 10) {
-                System.out.println("    +++++++++ D R O W +++++++++");
+                System.out.println("\n    +++++++++ D R O W +++++++++");
                 break;
             }
             System.out.println("\n== O == Round " + round + " ==");
@@ -65,8 +65,8 @@ public class WhoWin extends Game {
 
     private void CheckWins() {
         if (isXWis()) {
-            System.out.println("+++++++++ X WINS!!! +++++++++");
+            System.out.println("\n+++++++++ X WINS!!! +++++++++");
         } else if (isOWins())
-            System.out.println("+++++++++ O WINS!!! +++++++++");
+            System.out.println("\n+++++++++ O WINS!!! +++++++++");
     }
 }

@@ -5,7 +5,7 @@ public class Choice {
     private final boolean computer = computer();
 
     private String choice() {
-        System.out.println("\n--- Hello in Tic Tac Toe!--- \n\nWould you like to play with computer or other player? " +
+        System.out.println("\n--- Hello in Tic Tac Toe game!--- \n\nWould you like to play with computer or other player? " +
                 "(C - computer / P - Other player)");
         Scanner hello = new Scanner(System.in);
         while (true) {
