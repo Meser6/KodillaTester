@@ -7,7 +7,6 @@ public class BookApplication extends BookManager {
         Book three = createBook("XXX", "YYY");
         boolean address = one == two;
         System.out.println("The same address - " + address);
-        boolean addressList = lists.get(0) == lists.get(2);
         System.out.println("List address: " + address);
     }
 }
