@@ -18,15 +18,14 @@ public class Grades {
         this.size++;
     }
 
-    public int lastMark(int[] grades) {/*TODO Review pls remove argument*/
-        this.grades = grades;//TODO Remove this line
+    public int lastMark() {
         int last = grades[grades.length - 1];
         return last;
 
     }
 
-    public double average(int[]grades) {/*TODO Review pls remove argument*/
-        int suma = 0;//TODO Remove line
+    public double average() {
+        int suma = 0;
         for (int i = 0; i < grades.length; i++) {
             suma += grades[i];
         }
@@ -39,13 +38,7 @@ public class Grades {
         Grades grades = new Grades();
         grades.add(2);
         grades.add(5);
-        grades.lastMark(grades.grades);
-        grades.average(grades.grades);
-
-       
-
-
-
+        grades.lastMark();
+        grades.average();
     }
-
 }
