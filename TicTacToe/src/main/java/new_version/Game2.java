@@ -2,16 +2,16 @@ package new_version;
 
 public class Game2 {
     public Game2() {
-        this.board = new Bartd();
+        this.board = new Board();
     }
 
-    private Bartd board;
+    private Board board;
     private Side currentTurn;
     private boolean computerOpponent; // TODO
 
-    public boolean checkWin() {
+    public Side checkWin() {
         //TODO
-        return false;
+        return Side.NONE;
     }
 
     public void changeTurn() {
@@ -27,7 +27,7 @@ public class Game2 {
         while (true) {
             askMove();
             board.draw();
-            if (checkWin()) {
+            if (checkWin() != Side.NONE) {
                 break;
             } else {
                 changeTurn();

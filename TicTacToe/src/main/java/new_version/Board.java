@@ -1,6 +1,6 @@
 package new_version;
 
-public class Bartd {
+public class Board {
 
 
     private final static int SIZEX = 3;
