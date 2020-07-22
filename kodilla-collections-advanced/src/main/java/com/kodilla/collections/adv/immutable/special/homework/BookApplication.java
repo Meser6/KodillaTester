@@ -9,4 +9,5 @@ public class BookApplication extends BookManager {
         System.out.println("The same address - " + address);
         System.out.println("List address: " + address);
     }
+
 }
