@@ -46,7 +46,7 @@ public class Prepare extends XOrO {
         areaFlash();
     }
 
-    public void badAdd(int value) {
+    public void badAdd(int value) { // verify
         if (value > 8 || value < 0) {
             System.out.println("Wrong number area. Please enter right number.");
         } else if (!g[value].equals(" ")) {
