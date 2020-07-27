@@ -2,4 +2,5 @@ rootProject.name = 'kodilla-course'
 include 'kodilla-intro'
 include 'kodilla-collections-advanced'
 include 'TicTacToe'
+include 'kodilla-stream'
 
