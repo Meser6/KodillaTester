@@ -9,8 +9,4 @@ class WarehouseTestSuite {
         Warehouse warehouse = new Warehouse();
         warehouse.getOrder("1");
     }
-
-
-
-
 }
