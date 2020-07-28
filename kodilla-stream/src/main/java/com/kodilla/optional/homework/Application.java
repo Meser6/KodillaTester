@@ -19,11 +19,9 @@ public class Application {
         list.add(new Student("Bartek", teacher2));
         list.add(new Student("Igor", null));
 
-        Optional<List<Student>> optionalUser = Optional.ofNullable(list);
-
-        System.out.println(optionalUser);
-
-        //TODO
+        for (Student student : list){
+            System.out.println(student.getName() + " " + student.getTeacherName());
+        }
     }
 }
 

@@ -1,5 +1,7 @@
 package com.kodilla.optional.homework;
 
+import java.util.Optional;
+
 public class Student {
 
     private String name;
@@ -16,6 +18,12 @@ public class Student {
 
     public Teacher getTeacher() {
         return teacher;
+    }
+
+    public String getTeacherName (){
+        Optional<Teacher> optionalTeacher = Optional.ofNullable(teacher);
+        Teacher result = optionalTeacher.orElse(new Teacher("<undifie>"));
+        return result.getName();
     }
 
     @Override
