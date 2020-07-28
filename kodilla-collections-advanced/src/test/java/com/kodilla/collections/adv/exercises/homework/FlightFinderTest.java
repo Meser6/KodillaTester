@@ -10,25 +10,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class FlightFinderTest {
 
     @Test
-    public void testFlightFrom() {
-/*
-        List<Flight> flights = FlightRepository.getFlightsTable();
-        flights.add(new Flight("XXX", "YYY"));
-        flights.add(new Flight("XXX", "ZZZ"));
-        flights.add(new Flight("AAA", "XXX"));
-        flights.add(new Flight("YYY", "ZZZ"));
+    public void x() {
 
-        FlightFinder flight = new FlightFinder();
-        List<Flight> result = flight.findFlightsFrom("XXX");
-
-        List<Flight> expectedList = new ArrayList<>();
-        expectedList.add(new Flight("XXX", "YYY"));
-        expectedList.add(new Flight("XXX", "ZZZ"));
-        assertEquals(expectedList, result);
-
-        Chciałem dodać własne, nowe przypadki tylko na czas testu. z tego co widziałem dodało je, ale wyszukuje się tylko
-        po tej starej liscie. jak się dostać do nowej, z tymi przypadkami?
- */
 
         FlightFinder flight = new FlightFinder();
         List<Flight> result = flight.findFlightsFrom("Warsaw");
@@ -42,7 +25,7 @@ class FlightFinderTest {
     }
 
     @Test
-    public void testWithBadArguments_From(){
+    public void testWithBadArguments_From() {
         FlightFinder flight = new FlightFinder();
         List<Flight> result = flight.findFlightsFrom("Chicago");
 
@@ -63,8 +46,9 @@ class FlightFinderTest {
         assertEquals(expectedList, result);
 
     }
+
     @Test
-    public void testWithBadArguments_To(){
+    public void testWithBadArguments_To() {
         FlightFinder flight = new FlightFinder();
         List<Flight> result = flight.findFlightsTo("Chicago");
 
