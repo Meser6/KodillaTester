@@ -20,7 +20,7 @@ public class Application {
         list.add(new Student("Igor", null));
 
         for (Student student : list){
-            System.out.println(student.getName() + " " + student.getTeacherName());
+            System.out.println("Student " + student.getName() + ", Teacher: " + student.getTeacherName());
         }
     }
 }
