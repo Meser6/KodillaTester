@@ -1,12 +1,15 @@
 package com.kodilla.parametrized_tests.homework;
 
+import java.util.Optional;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class UserValidator {
 
     public boolean validateUsername(String username) {
-        return username.matches("^[a-zA-Z0-9._-]{3,}$");
+        return Optional.ofNullable(username)
+                .map(uname -> uname.matches("^[a-zA-Z0-9._-]{3,}$"))
+                .orElse(false);
     }
 
     public boolean validateEmail(String email) {
