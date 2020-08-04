@@ -1,7 +1,5 @@
 package com.kodilla.parametrized_tests.homework;
 
-import java.util.Scanner;
-
 public class Person {
 
     private double heightInMeters;
@@ -37,6 +35,5 @@ public class Person {
         }
         return "Obese Class VI (Hyper Obese)";
     }
-
 
 }

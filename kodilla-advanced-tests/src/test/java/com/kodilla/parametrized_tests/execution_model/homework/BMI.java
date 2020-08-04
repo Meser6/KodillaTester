@@ -1,6 +1,5 @@
 package com.kodilla.parametrized_tests.execution_model.homework;
 
-import com.kodilla.parametrized_tests.homework.Person;
 import org.junit.jupiter.params.provider.Arguments;
 
 import java.util.stream.Stream;
