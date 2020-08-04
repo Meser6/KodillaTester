@@ -14,4 +14,3 @@ public class PersonTestSuite {
         Assertions.assertEquals(result, person.getBMI());
     }
 }
-
