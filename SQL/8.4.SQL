@@ -1,0 +1,1 @@
+IF EXISTS tabela DROP tabela;
