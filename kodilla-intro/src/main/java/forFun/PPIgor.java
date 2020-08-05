@@ -1,8 +1,10 @@
 package forFun;
 
+import java.util.Random;
+
 public class PPIgor {
     public static void main(String[] args) {
-        int liczby[] = new int[10];
+       /* int liczby[] = new int[10];
         liczby[0] = 254;
         liczby[1] = 5585;
         liczby[2] = 4517;
@@ -26,5 +28,14 @@ public class PPIgor {
         } else {
             System.out.println("nie");
         }
+    }
+
+        */
+
+        Random random = new Random();
+        int x = random.nextInt(5555);
+
+        System.out.println(x);
+
     }
 }
