@@ -1,5 +1,8 @@
 package new_version;
 
+import java.awt.*;
+import java.util.Scanner;
+
 public class Game2 {
     public Game2() {
         this.board = new Board();
@@ -40,10 +43,24 @@ public class Game2 {
     public static void main(String[] args) {
         var game = new Game2();
         game.start();
-        game.board.draw();
     }
 
     private void askMove() {
-        //TODO w zaleznosci od computeropponent
+        while (true) {
+            System.out.println("\n" + currentTurn.toString() + " Podaj pole");
+            Scanner scanner = new Scanner(System.in);
+            int x = scanner.nextInt();
+            int y = scanner.nextInt();
+            if (validate(x, y)) {
+                board.put(x,y,currentTurn);
+                return;
+            }
+
+            //TODO w zaleznosci od computeropponent
+        }
+    }
+
+    private boolean validate(int x, int y) {
+        return true; //TODO
     }
 }
