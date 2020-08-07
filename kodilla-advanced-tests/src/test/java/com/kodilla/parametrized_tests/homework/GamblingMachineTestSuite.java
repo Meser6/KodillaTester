@@ -30,8 +30,8 @@ public class GamblingMachineTestSuite {
 
     @ParameterizedTest
     @CsvFileSource(resources = "/WrongNumbers.csv")
-    public void should_error_if_add_bad_values_only_numbers(int value1, int value2, int value3, int value4, int value5, int value6)
-            throws InvalidNumbersException {
+
+    public void should_error_if_add_bad_values_only_numbers(int value1, int value2, int value3, int value4, int value5, int value6) {
         GamblingMachine gamblingMachine = new GamblingMachine();
         Set<Integer> set = new HashSet<>();
         set.add(value1);
@@ -40,16 +40,20 @@ public class GamblingMachineTestSuite {
         set.add(value4);
         set.add(value5);
         set.add(value6);
+        //TODO check this solution:
+        Assertions.assertThrows(InvalidNumbersException.class, () -> {
+            gamblingMachine.howManyWins(set);
+        });
+
     }
 
     @ParameterizedTest
-
-
     @Test
     public void should_error_if_add_one_good_value() throws InvalidNumbersException {
         GamblingMachine gamblingMachine = new GamblingMachine();
         Set<Integer> set = new HashSet<>();
         set.add(5);
+        //TODO pls finish test implementation
     }
 
     @Test
