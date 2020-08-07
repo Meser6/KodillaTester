@@ -1,3 +1,5 @@
+--TODO Correct syntax is: DROP TABLE IF EXISTS
+--Pls also add database selection: USE kodilla_tester;
 IF EXISTS ISSUESLISTS DROP ISSUESLISTS;
 IF EXISTS ISSUES DROP ISSUES;
 
