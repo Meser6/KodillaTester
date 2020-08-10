@@ -28,7 +28,6 @@ public class Zadania3 {
         tablica2[2] = new Tablica2(5);
         for (int i = (tablica2.length - 1); i <= 0; i--) {
             System.out.println(tablica2[i].tablica);
-        } // TODO
-        // czemu to sie nie wyswietla? ma isć od konca
+        }
     }
 }

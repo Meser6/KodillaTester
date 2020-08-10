@@ -4,4 +4,5 @@ include 'kodilla-collections-advanced'
 include 'TicTacToe'
 include 'kodilla-stream'
 include 'kodilla-advanced-tests'
+include 'kodilla-spring-basic'
 
