@@ -40,24 +40,24 @@ public class GamblingMachineTestSuite {
         set.add(value4);
         set.add(value5);
         set.add(value6);
-        //TODO check this solution:
         Assertions.assertThrows(InvalidNumbersException.class, () -> {
             gamblingMachine.howManyWins(set);
         });
 
     }
 
-    @ParameterizedTest
     @Test
-    public void should_error_if_add_one_good_value() throws InvalidNumbersException {
+    public void should_error_if_add_one_good_value() {
         GamblingMachine gamblingMachine = new GamblingMachine();
         Set<Integer> set = new HashSet<>();
         set.add(5);
-        //TODO pls finish test implementation
+        Assertions.assertThrows(InvalidNumbersException.class, () -> {
+            gamblingMachine.howManyWins(set);
+        });
     }
 
     @Test
-    public void should_computer_add_good_values() throws InvalidNumbersException {
+    public void should_computer_add_good_values()  {
         GamblingMachine gamblingMachine = new GamblingMachine();
         Set<Integer> set = gamblingMachine.getGenerateComputerNumbers();
         Assertions.assertEquals(6, set.size());

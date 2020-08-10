@@ -37,7 +37,6 @@ public class GamblingMachine {
         return numbers;
     }
 
-    // Mogę sobię dodać do kodu gettera jeśli chce przetestować prywatna metode?
     public Set<Integer> getGenerateComputerNumbers(){
         return generateComputerNumbers();
     }
