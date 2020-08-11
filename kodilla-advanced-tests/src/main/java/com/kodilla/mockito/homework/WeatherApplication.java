@@ -17,12 +17,14 @@ import java.util.Set;
 public class WeatherApplication {
 
 
-    private Set<Location> locations = new HashSet<>();;
+    private Set<Location> locations = new HashSet<>();
+    ;
     private Map<User, Set<Location>> app = new HashMap<>();
 
     public Map<User, Set<Location>> getApp() {
         return this.app;
     }
+
     public void addUserToLocation(User user, Location location) {
         if (app.containsKey(user)) {
             app.get(user).add(location);
@@ -47,12 +49,10 @@ public class WeatherApplication {
         this.app.remove(user);
     }
 
-    // wysyla notke do kazdego kto jest w mapie app
     public void sendNotificationToEverybody() {
         this.app.forEach((user, locations) -> user.sendGeneralNotification());
     }
 
-    // wysya alerty pogodowe do kazdego kto jest dopisany do lokalizacji
     public void sendNotificationToOneLocation(Location location) {
         this.app.entrySet()
                 .stream()

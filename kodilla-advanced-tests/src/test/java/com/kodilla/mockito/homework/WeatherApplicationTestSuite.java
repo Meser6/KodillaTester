@@ -24,12 +24,11 @@ class WeatherApplicationTestSuite {
     @Test
     public void should_user_dont_get_notification_if_he_remove_location_subscribe() {
         app.addUserToLocation(u1, l2);
-        app.addUserToLocation(u2, l2);
         app.removeUserFromLocation(u1, l2);
         app.sendNotificationToOneLocation(l2);
-       // app.sendNotificationToOneLocation(l1);
-        Mockito.verify(u2, Mockito.times(1)).sendNotification(l2);
-       // Mockito.verify(u2, Mockito.never()).sendNotification(l1);
+        app.sendNotificationToOneLocation(l1);
+        Mockito.verify(u2, Mockito.never()).sendNotification(l2);
+        Mockito.verify(u2, Mockito.never()).sendNotification(l1);
     }
 
     @Test
@@ -45,7 +44,7 @@ class WeatherApplicationTestSuite {
     }
 
     @Test
-    public void should_remove_location(){
+    public void should_remove_location() {
         app.removeLocation(l1);
         Mockito.verify(l1, Mockito.times(1)).deleteLocation();
     }
