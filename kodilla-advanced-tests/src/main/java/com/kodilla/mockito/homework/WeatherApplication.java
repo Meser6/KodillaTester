@@ -4,57 +4,41 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
-
-/**
- * OK Osoba zainteresowana może zostać zapisana do danej lokalizacji, i zacznie otrzymywać powiadomienia.
- * OK Można wycofać subskrypcję z danej lokalizacji.
- * OK Można wycofać subskrypcję ze wszystkich lokalizacji, co równa się kompletnemu wypisaniu klienta z powiadomień.
- * OK Powiadomienie dla osób w danej lokalizacji powinno dotrzeć tylko do określonej grupy osób.
- * OK Możliwość wysyłki powiadomienia do wszystkich.
- * Możliwość skasowania danej lokalizacji.
- */
-
 public class WeatherApplication {
 
-
-    private Set<Location> locations = new HashSet<>();
-    ;
-    private Map<User, Set<Location>> app = new HashMap<>();
-
-    public Map<User, Set<Location>> getApp() {
-        return this.app;
-    }
+    private final Set<Location> locations = new HashSet<>();
+    private final Map<User, Set<Location>> userLocationsMap = new HashMap<>();
 
     public void addUserToLocation(User user, Location location) {
-        if (app.containsKey(user)) {
-            app.get(user).add(location);
+        if (userLocationsMap.containsKey(user)) {
+            userLocationsMap.get(user).add(location);
         } else {
             this.locations.add(location);
-            app.put(user, locations);
+            userLocationsMap.put(user, locations);
         }
     }
 
     public void removeUserFromLocation(User user, Location location) {
-        for (Map.Entry<User, Set<Location>> usersMap : app.entrySet()) {
+        for (Map.Entry<User, Set<Location>> usersMap : userLocationsMap.entrySet()) {
             if (usersMap.getKey().equals(user)) {
                 usersMap.getValue().remove(location);
                 if (usersMap.getValue().isEmpty()) {
-                    this.app.remove(user);
-                } //TODO
+                    this.userLocationsMap.remove(user);
+                }
             }
         }
     }
 
     public void removeUsersFromSubscribe(User user) {
-        this.app.remove(user);
+        this.userLocationsMap.remove(user);
     }
 
     public void sendNotificationToEverybody() {
-        this.app.forEach((user, locations) -> user.sendGeneralNotification());
+        this.userLocationsMap.forEach((user, locations) -> user.sendGeneralNotification());
     }
 
     public void sendNotificationToOneLocation(Location location) {
-        this.app.entrySet()
+        this.userLocationsMap.entrySet()
                 .stream()
                 .filter(user -> user.getValue().contains(location))
                 .forEach(user -> user.getKey().sendNotification(location));
