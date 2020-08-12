@@ -9,6 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class UserValidatorTestSuite {
+    /*
 
     @ParameterizedTest
     @ValueSource(strings = {"User", "user", "zyx", "x9p", "_.-", "XXX", "123"})
@@ -65,5 +66,7 @@ public class UserValidatorTestSuite {
         boolean x = new UserValidator().validateEmail(mail);
         assertTrue(x);//Regex pattern is so constructed, that it allows for empty emails :)
     }
+
+     */
 
 }

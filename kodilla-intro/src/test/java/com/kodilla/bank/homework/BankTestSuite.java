@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class BankTestSuite {
+    /*
     @Test
     public void nonOpeartion() {
         Bank bank = new Bank();
@@ -67,4 +68,5 @@ public class BankTestSuite {
         bank2.addOperation(-100);
         assertEquals(-200, Bank.averageOfEveryPayoff(), 1.0);
     }
+    */
 }
