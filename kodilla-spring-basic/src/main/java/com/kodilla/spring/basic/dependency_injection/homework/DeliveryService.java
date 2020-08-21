@@ -1,7 +1,14 @@
 package com.kodilla.spring.basic.dependency_injection.homework;
 
-public interface DeliveryService {
+import org.springframework.stereotype.Component;
 
-    public boolean deliverPackage(String address, double weight);// {
+@Component
+public class DeliveryService {
 
+    public boolean deliverPackage(String address, double weight) {
+        if (weight > 30) {
+            return false;
+        }
+        return true;
+    }
 }

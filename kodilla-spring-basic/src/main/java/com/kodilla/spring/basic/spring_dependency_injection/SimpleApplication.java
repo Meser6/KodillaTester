@@ -2,11 +2,15 @@ package com.kodilla.spring.basic.spring_dependency_injection;
 
 import org.springframework.stereotype.Component;
 
+import javax.annotation.Resource;
+
 @Component
 public class SimpleApplication {
-    private SkypeMessageService messageService;
 
-    public SimpleApplication(SkypeMessageService messageService) {
+    @Resource(name = "SkypeMessageService")
+    private MessageService messageService;
+
+    public SimpleApplication(MessageService messageService) {
         this.messageService = messageService;
     }
 
@@ -19,5 +23,9 @@ public class SimpleApplication {
 
     private boolean checkReceiver(String receiver) {
         return receiver != null && !receiver.isEmpty();
+    }
+
+    public void setMessageService(SkypeMessageService messageService) {
+        this.messageService = messageService;
     }
 }

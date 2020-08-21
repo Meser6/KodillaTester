@@ -1,18 +1,25 @@
 package com.kodilla.spring.basic.dependency_injection.homework;
 
-public class ShippingCenter  {
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
 
-   private SendService sendService;
+import javax.annotation.Resource;
 
-    public ShippingCenter (SendService sendService){
-        this.sendService = sendService;
-    }
+@Component
+public class ShippingCenter {
 
-    public void sendPackage(String address, double weight) {
-        if (sendService.deliverPackage(address, weight)) {
-            sendService.success(address);
-        } else {
-            sendService.fail(address);
+    @Resource(name = "DeliveryService")
+    private DeliveryService deliveryService;
+
+    @Autowired
+    @Qualifier(value = "NotificationService")
+    private NotificationService notificationService;
+
+    public String sendPackage(String address, double weight) {
+        if (deliveryService.deliverPackage(address, weight)) {
+            return notificationService.success(address);
         }
+        return notificationService.fail(address);
     }
 }
