@@ -3,8 +3,10 @@ package com.kodilla.spring.basic.spring_configuration.homework;
 public class Cabrio implements Car {
 
     @Override
-    public boolean hasHeadlightsTurnedOn() {
-        return false;
+    public boolean hasHeadlightsTurnedOn(int hour) {
+        if (hour >= 6 && hour <= 20) {
+            return true;
+        } else return false;
     }
 
     @Override

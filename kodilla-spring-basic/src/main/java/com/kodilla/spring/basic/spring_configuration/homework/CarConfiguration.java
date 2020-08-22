@@ -30,20 +30,24 @@ public class CarConfiguration {
 
     @Bean
     public Car seasonCar(String season) {
-        Car car = null;
+        Car car;
         switch (season) {
             case ("Winter"):
+            case ("winter"):
                 car = new SUV();
                 break;
             case ("Summer"):
+            case ("summer"):
                 car = new Cabrio();
                 break;
             case ("Spring"):
-                car = new Sedan();
-                break;
+            case ("spring"):
             case ("Autumn"):
+            case ("autumn"):
                 car = new Sedan();
                 break;
+            default:
+                throw new IllegalStateException("Unexpected value: " + season);
         }
         return car;
     }
@@ -54,6 +58,4 @@ public class CarConfiguration {
             return true;
         } else return false;
     }
-
-
 }
