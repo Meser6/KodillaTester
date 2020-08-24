@@ -7,4 +7,5 @@ include 'kodilla-advanced-tests'
 include 'kodilla-spring-basic'
 include 'kodilla-course.kodilla-spring-basic'
 include 'kodilla-spring-basic'
+include 'kodilla-rest-api'
 
