@@ -9,11 +9,10 @@ import javax.annotation.Resource;
 @Component
 public class ShippingCenter {
 
-    @Resource(name = "DeliveryService")
+    @Autowired
     private DeliveryService deliveryService;
 
     @Autowired
-    @Qualifier(value = "NotificationService")
     private NotificationService notificationService;
 
     public String sendPackage(String address, double weight) {
