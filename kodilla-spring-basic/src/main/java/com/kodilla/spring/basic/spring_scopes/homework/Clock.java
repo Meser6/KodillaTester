@@ -7,7 +7,7 @@ import java.time.LocalTime;
 @Component
 public class Clock {
 
-    public LocalTime localTime(){
+    public LocalTime localTime() {
         return localTime();
     }
 }

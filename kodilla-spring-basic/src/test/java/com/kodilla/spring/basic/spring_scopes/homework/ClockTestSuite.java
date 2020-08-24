@@ -8,13 +8,11 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 import java.time.LocalTime;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 @SpringBootTest
 class ClockTestSuite {
 
     @Test
-    public void Should_get_difference_time(){
+    public void Should_get_difference_time() {
         ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring.basic.spring_scopes");
         Clock time1 = context.getBean(Clock.class);
         LocalTime time11 = time1.localTime();
@@ -26,5 +24,4 @@ class ClockTestSuite {
         Assertions.assertNotEquals(time33, time22);
         Assertions.assertNotEquals(time33, time11);
     }
-
 }
