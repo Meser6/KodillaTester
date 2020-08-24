@@ -1,0 +1,23 @@
+{
+    "model": "Fiesta",
+    "mark" : "Ford",
+    "seats":[
+        "seatOne":{
+            "material": "textile",
+            "color" :"black",
+               }
+        "seatOne":{
+            "material": "textile",
+            "color" :"yellow",
+            }
+        "seatsOne":{
+            "material": "textile",
+            "color" :"blue",
+            }
+        "seatsOne":{
+            "material": "textile",
+            "color" :"grey",
+            }
+        ]
+    "engine capacity" : 1500
+}
