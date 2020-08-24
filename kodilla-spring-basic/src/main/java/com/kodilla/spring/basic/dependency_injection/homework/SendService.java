@@ -1,6 +1,6 @@
 package com.kodilla.spring.basic.dependency_injection.homework;
 
-public class SendService  {
+public class SendService {
 
     public void success(String address) {
         System.out.println("Package delivered to: " + address);

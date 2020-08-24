@@ -6,9 +6,6 @@ import org.springframework.stereotype.Component;
 public class DeliveryService {
 
     public boolean deliverPackage(String address, double weight) {
-        if (weight > 30) {
-            return false;
-        }
-        return true;
+        return !(weight > 30);
     }
 }
