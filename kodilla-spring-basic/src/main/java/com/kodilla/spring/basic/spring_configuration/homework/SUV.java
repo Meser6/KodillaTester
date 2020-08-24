@@ -4,9 +4,7 @@ public class SUV implements Car {
 
     @Override
     public boolean hasHeadlightsTurnedOn(int hour) {
-        if (hour >= 6 && hour <= 20) {
-            return true;
-        } else return false;
+        return hour >= 6 && hour <= 20;
     }
 
     @Override

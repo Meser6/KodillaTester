@@ -2,32 +2,34 @@ package com.kodilla.spring.basic.spring_configuration.homework;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 class CarConfigurationTestSuite {
 
-    ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring.basic.spring_configuration");
+    @Autowired
+    private CarConfiguration car;
 
     @Test
-    public void costam(){
-        CarConfiguration car = (CarConfiguration) context.getBean("seasonCar");
+    public void ShouldGetGoodCarTypeIfGetWinter() {
         Car car1 = car.seasonCar("Winter");
-        String x = car1.getCarType();
-        System.out.println(x);
-        Assertions.assertEquals("SUV", x);
+        Assertions.assertEquals("SUV", car1.getCarType());
     }
 
     @Test
-    public void dupa(){
-        CarConfiguration car = context.getBean(CarConfiguration.class);
-        Boolean x = car.lights(10);
-        Assertions.assertTrue(x);
+    public void ShouldGetGoodCarTypeIfGetSpring() {
+        Car car1 = car.seasonCar("spring");
+        Assertions.assertEquals("Sedan", car1.getCarType());
     }
 
-    //TODO
+    @Test
+    public void ShouldGetTurnOnLightsIfDay() {
+        Assertions.assertTrue(car.lights(10));
+    }
+
+    @Test
+    public void ShouldGetTurnOnLightsIfNight() {
+        Assertions.assertFalse(car.lights(1));
+    }
 }
