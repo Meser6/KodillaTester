@@ -28,7 +28,7 @@ public class CarConfiguration {
         return new Sedan();
     }
 
-    @Bean
+   // @Bean
     public Car seasonCar(String season) {
         Car car;
         switch (season) {
@@ -52,7 +52,7 @@ public class CarConfiguration {
         return car;
     }
 
-    @Bean
+    //@Bean
     public boolean lights(int hour) {
         if (hour >= 6 && hour <= 20) {
             return true;
