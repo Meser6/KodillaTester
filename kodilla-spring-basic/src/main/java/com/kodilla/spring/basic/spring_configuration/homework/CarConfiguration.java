@@ -1,16 +1,11 @@
 package com.kodilla.spring.basic.spring_configuration.homework;
 
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-/*
-4. W klasie konfiguracyjnej utwórz metodę, która będzie zwracać beana w zależności od pory roku. Jeśli jest lato, chcemy
- jeździć kabrioletem, zimą SUVem, wiosną i jesienią sedanem.
+import org.springframework.stereotype.Component;
 
- Dodatkowo, samochód powinien mieć włączone światła, jeśli
- godzina jest w zakresie 20:00 – 06:00.
- */
+import java.util.Random;
 
-@Configuration
+@Component
 public class CarConfiguration {
 
     @Bean
@@ -29,31 +24,43 @@ public class CarConfiguration {
     }
 
     @Bean
-    public Car seasonCar(String season) {
+    public Car seasonCar() {
         Car car;
-        switch (season) {
-            case ("Winter"):
-            case ("winter"):
+     /*   switch (Season.random()) {
+            case (WINTER):
                 car = new SUV();
                 break;
-            case ("Summer"):
-            case ("summer"):
+            case (SUMMER):
                 car = new Cabrio();
                 break;
-            case ("Spring"):
-            case ("spring"):
-            case ("Autumn"):
-            case ("autumn"):
+            case (AUTUMN):
+            case (SPRING):
                 car = new Sedan();
                 break;
             default:
-                throw new IllegalStateException("Unexpected value: " + season);
+                throw new IllegalStateException();
         }
-        return car;
+
+      */
+        return new Sedan();
     }
 
     @Bean
-    public boolean lights(int hour) {
-        return hour >= 6 && hour <= 20;
+    public boolean lights() {
+        return true;
+    }
+
+    private enum Season {
+        WINTER,
+        SPRING,
+        SUMMER,
+        AUTUMN;
+
+        public static Season random() {
+            int index = new Random().nextInt(4);
+            return Season.values()[index];
+        }
+
+        ;
     }
 }

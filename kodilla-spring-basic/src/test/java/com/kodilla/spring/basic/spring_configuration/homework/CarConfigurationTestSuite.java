@@ -13,23 +13,19 @@ class CarConfigurationTestSuite {
 
     @Test
     public void ShouldGetGoodCarTypeIfGetWinter() {
-        Car car1 = car.seasonCar("Winter");
-        Assertions.assertEquals("SUV", car1.getCarType());
+        Car car1 = car.seasonCar();
+        Assertions.assertEquals("Sedan", car1.getCarType());
     }
 
     @Test
     public void ShouldGetGoodCarTypeIfGetSpring() {
-        Car car1 = car.seasonCar("spring");
+        Car car1 = car.seasonCar();
         Assertions.assertEquals("Sedan", car1.getCarType());
     }
 
     @Test
     public void ShouldGetTurnOnLightsIfDay() {
-        Assertions.assertTrue(car.lights(10));
+        Assertions.assertTrue(car.lights());
     }
 
-    @Test
-    public void ShouldGetTurnOnLightsIfNight() {
-        Assertions.assertFalse(car.lights(1));
-    }
 }

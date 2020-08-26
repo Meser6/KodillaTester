@@ -2,7 +2,7 @@ package com.kodilla.spring.basic.spring_dependency_injection;
 
 import org.springframework.stereotype.Component;
 
-//@Component
+@Component
 public class FacebookMessageService implements MessageService {
 
     @Override

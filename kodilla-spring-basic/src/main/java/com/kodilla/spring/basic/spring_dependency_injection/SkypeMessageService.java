@@ -2,7 +2,7 @@ package com.kodilla.spring.basic.spring_dependency_injection;
 
 import org.springframework.stereotype.Component;
 
-//@Component
+@Component(value = "Skype")
 public class SkypeMessageService implements MessageService {
 
     public String send(String message, String receiver) {

@@ -12,7 +12,7 @@ import java.time.LocalTime;
 class ClockTestSuite {
 
     @Test
-    public void Should_get_difference_time() {
+    public void Should_get_difference_time() throws InterruptedException {
         ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring.basic.spring_scopes");
         Clock time1 = context.getBean(Clock.class);
         LocalTime time11 = time1.localTime();

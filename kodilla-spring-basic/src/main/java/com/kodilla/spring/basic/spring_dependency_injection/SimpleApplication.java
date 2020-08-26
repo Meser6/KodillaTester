@@ -4,13 +4,13 @@ import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
 
-@Component
+@Component(value = "SimpleApp1")
 public class SimpleApplication {
 
-    @Resource(name = "SkypeMessageService")
-    private MessageService messageService;
+    @Resource(name = "Skype")
+    private SkypeMessageService messageService;
 
-    public SimpleApplication(MessageService messageService) {
+    public SimpleApplication(SkypeMessageService messageService) {
         this.messageService = messageService;
     }
 
