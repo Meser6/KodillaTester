@@ -5,15 +5,12 @@ import org.junit.jupiter.api.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class AnimalFactoryTestSuite {
 
-    @Test
+  /*  @Test
    public void Should_get_Dog_if_createDog(){
         ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring.basic.spring_configuration");
          Dog dogBean = context.getBean(Dog.class);
@@ -21,6 +18,8 @@ class AnimalFactoryTestSuite {
         Assertions.assertEquals("Bark bark", voice);
 
     }
+
+   */
 
     @Test
     void randomAnimal() {
@@ -30,7 +29,9 @@ class AnimalFactoryTestSuite {
         System.out.println(x);
         List<String> voiceList = Arrays.asList("Bark bark", "Meow meow", "Quack quack");
         Assertions.assertTrue(voiceList.contains(x));
-    }    @Test
+    }
+
+    @Test
     void random23nimal() {
         ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring.basic.spring_configuration");
         Animal animalBean = (Animal) context.getBean("randomAnimal");
@@ -38,7 +39,9 @@ class AnimalFactoryTestSuite {
         System.out.println(x);
         List<String> voiceList = Arrays.asList("Bark bark", "Meow meow", "Quack quack");
         Assertions.assertTrue(voiceList.contains(x));
-    }    @Test
+    }
+
+    @Test
     void random2Animal() {
         ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring.basic.spring_configuration");
         Animal animalBean = (Animal) context.getBean("randomAnimal");
@@ -47,4 +50,6 @@ class AnimalFactoryTestSuite {
         List<String> voiceList = Arrays.asList("Bark bark", "Meow meow", "Quack quack");
         Assertions.assertTrue(voiceList.contains(x));
     }
+
+
 }
