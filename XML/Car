@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<car name="ford">
+    <mark>Ford</mark>
+    <model>Fiesta</model>
+    <production_date>2002</production_date>
+    <engine>1.4</engine>
+    <color>silver</color>
+    <mileage>123000</mileage>
+    <price>3500 </price>
+</car>
