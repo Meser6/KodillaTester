@@ -16,7 +16,7 @@ class BookControllerTestSuite {
 
     @Test
     public void shouldFetchBooks() {
-        BookService bookServiceMock = new Mockito().mock(BookService.class);
+        BookService bookServiceMock = Mockito.mock(BookService.class);
         BookController bookController = new BookController(bookServiceMock);
         List<BookDto> bookList = new ArrayList<>();
         Mockito.when(bookServiceMock.getBooks()).thenReturn(bookList);
@@ -30,15 +30,13 @@ class BookControllerTestSuite {
 
     @Test
     public void shouldAddBook() {
-        BookService bookServiceMock = new Mockito().mock(BookService.class);
-        BookDto bookDtoMock = new Mockito().mock(BookDto.class);
+        BookService bookServiceMock = Mockito.mock(BookService.class);
+        BookDto bookDto = new BookDto("1", "11");
         BookController bookController = new BookController(bookServiceMock);
-        List<BookDto> list = new ArrayList<>();
-        Mockito.when(bookServiceMock.addBooks(bookDtoMock)).then(list.add(bookDtoMock));
-        Mockito.when(bookServiceMock.getBooks()).thenReturn(list);
+        Mockito.when(bookServiceMock.addBook(bookDto)).thenReturn(true);
 
-        bookController.addBook(new BookDto("1", "11"));
+        boolean added = bookController.addBook(bookDto);
 
-        Assertions.assertEquals(1, list.size());
+        Assertions.assertTrue(added);
     }
 }
