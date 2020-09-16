@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -21,7 +22,7 @@ public class AllegroTestingAppCSS {
 
         Map<Option, WebElement> elementMap = new HashMap<>();
 
-        SECONDS.sleep(3);
+       SECONDS.sleep(3);
 
         elementMap.put(Option.ALERT, driver.findElement(By.cssSelector(
                 "button._13q9y._8hkto.munh_56_m.m7er_k4.m7er_56_m")));
@@ -38,13 +39,19 @@ public class AllegroTestingAppCSS {
         elementMap.get(Option.INPUT_SEARCH).sendKeys("Mavic mini");
         elementMap.get(Option.OK).click();
 
-        SECONDS.sleep(5);
+       SECONDS.sleep(3);
 
-        List<WebElement> articlesCSS = new ArrayList<>();
 
+
+        List<WebElement> articlesCSS = driver.findElements(By.xpath("//*[@id='opbox-listing--base']/div/section/article"));
+
+        articlesCSS.forEach(a -> {
+            a.findElement(By.cssSelector("div > div[2] > div[1]> h2 > a"));
+        });
+/*
         for (int i = 1; i == 69; i++) {
             String p = String.valueOf(i);
-            articlesCSS.add(driver.findElement(By.cssSelector("section>article[" + p + "] > div > div[2] > div[1]> h2 > a")));
+            articlesCSS.add(driver.findElements(By.cssSelector("section>article[" + p + "] > div > div[2] > div[1]> h2 > a")));
         }
 
         List<String> article = new ArrayList<>();
@@ -56,5 +63,7 @@ public class AllegroTestingAppCSS {
         for (int i = 0; i == article.size(); i++) {
             System.out.println(article.get(i));
         }
+
+         */
     }
 }
