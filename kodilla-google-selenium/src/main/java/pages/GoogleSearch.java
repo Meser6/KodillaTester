@@ -9,10 +9,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 
-public class GoogleSearch extends  AbstractPage{
+public class GoogleSearch extends AbstractPage {
 
     @FindBy(css = "input[title=\"Szukaj\"]")
     static WebElement inputFiled;
@@ -31,18 +30,18 @@ public class GoogleSearch extends  AbstractPage{
     public static void main(String[] args) {
         System.setProperty("webdriver.chrome.driver", "c:\\selenium-drivers\\Chrome\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
         driver.navigate().to("http://www.google.com");
         PageFactory.initElements(driver, GoogleSearch.class);
-       inputFiled.sendKeys("Kodilla");
-       googleResults = loadResults(driver);
-       googleResults.iSeeResults();
-       driver.close();
+        inputFiled.sendKeys("Kodilla");
+        googleResults = loadResults(driver);
+        googleResults.iSeeResults();
+        driver.close();
     }
-    public static GoogleResults loadResults(WebDriver driver){
+
+    public static GoogleResults loadResults(WebDriver driver) {
         WebDriverWait wait = new WebDriverWait(driver, 10);
-     //   wait.until(ExpectedConditions.elementToBeClickable(searchButton.get(0))).click();
-     //   GoogleResults googleResults = new GoogleResults();
+        wait.until(ExpectedConditions.elementToBeClickable(searchButton.get(0))).click();
+        GoogleResults googleResults = new GoogleResults(driver);
         return googleResults;
     }
 }

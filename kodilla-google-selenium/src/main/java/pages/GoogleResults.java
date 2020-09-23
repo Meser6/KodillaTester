@@ -9,7 +9,7 @@ import java.util.List;
 
 public class GoogleResults extends AbstractPage {
 
-    @FindBy
+    @FindBy(css = "div[class='g]")
     private List<WebElement> results;
 
     public GoogleResults(WebDriver driver) {
