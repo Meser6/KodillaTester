@@ -1,10 +1,7 @@
-import io.cucumber.junit.Cucumber;
-import io.cucumber.junit.CucumberOptions;
-import org.junit.runner.RunWith;
+Feature: Is it Summer?
+   Everybody likes Summer
 
-@RunWith(Cucumber.class)
-@CucumberOptions(
-   features = {"src/test/resources"}
-)
-public class TestRunner {
-}
+   Scenario: Winter isn't Summer
+      Given today is last day of December
+      When I ask whether it's Summer
+      Then I should be told "Nope"

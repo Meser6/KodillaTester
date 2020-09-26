@@ -40,7 +40,7 @@ public class GoogleSearch extends AbstractPage {
 
     public static GoogleResults loadResults(WebDriver driver) {
         WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.elementToBeClickable(searchButton.get(0))).click();
+       // wait.until(ExpectedConditions.elementToBeClickable(searchButton.get(0))).click(); TODO
         GoogleResults googleResults = new GoogleResults(driver);
         return googleResults;
     }
