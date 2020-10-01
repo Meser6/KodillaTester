@@ -1,3 +1,12 @@
-"# kodilla-basic-tests" 
-"# jakub_kaczmarczyk_kodilla_tester" 
-finalne repozytorium
+#Kodilla course
+
+www.kodilla.com/pl/bootcamp/tester-automatyzujacy
+
+
+Syllabus:
+- Java 11
+- Mockito
+- SQL
+- Rest API
+- HTML/CSS/JS
+- Selenium
